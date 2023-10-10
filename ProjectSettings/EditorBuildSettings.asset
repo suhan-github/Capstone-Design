@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/GameHome.unity
+    guid: 0c725d03d85c81446b7b8dd44baf93f6
+  - enabled: 1
+    path: Assets/Scenes/PolyPark(Animal).unity
+    guid: f8a09204fdadaa74ebd013358bbbad83
+  - enabled: 1
+    path: Assets/Scenes/PolyPark(Fruit).unity
+    guid: 67d0991879446f04b86778dd279c9c7b
   m_configObjects: {}

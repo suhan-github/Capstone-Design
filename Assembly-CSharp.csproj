@@ -57,8 +57,17 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.8f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\UI\Scripts\PlayerSettings.cs" />
+    <Compile Include="Assets\DataManager.cs" />
+    <Compile Include="Assets\UI\Scripts\NewGameSettingUI.cs" />
+    <Compile Include="Assets\Select.cs" />
     <Compile Include="Assets\UI\Scripts\SettingsUI.cs" />
+    <Compile Include="Assets\Resources\LoadingSceneController.cs" />
     <Compile Include="Assets\MainMenu.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Sci-Fi Ball Robot\Shader\Flow (Legacy).shader" />
+    <None Include="Assets\Sci-Fi Ball Robot\Shader\Animation_Image (Legacy).shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
