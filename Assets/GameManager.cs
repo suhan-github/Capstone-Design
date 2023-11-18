@@ -5,13 +5,26 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    #region ΩÃ±€≈Ê
+    private static GameManager instance;
+    private void Awake()
+    {
+        instance = this;
+    }
+    public static GameManager Instance { get { return instance; } }
+    #endregion
+
+
     public GameObject menuSet;
     public GameObject Player;
+    public GameObject ChangePanel;
+    public GameObject CollectionPanel;
+    public bool is_Change;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        is_Change = false;
     }
 
     // Update is called once per frame
@@ -68,4 +81,30 @@ public class GameManager : MonoBehaviour
 #endif
 
     }
+
+    public void ChangePanel_Active()
+    {
+        is_Change = !ChangePanel.activeSelf;
+        StartCoroutine(PanelActive());
+    }
+
+    public void CollectionPanel_Active()
+    {
+        is_Change = !CollectionPanel.activeSelf;
+        StartCoroutine(CollectionPanelActive());
+    }
+
+    private IEnumerator PanelActive()
+    {
+        yield return new WaitForSeconds(0.1f);
+        ChangePanel.SetActive(!ChangePanel.activeSelf);
+    }
+
+    private IEnumerator CollectionPanelActive()
+    {
+        yield return new WaitForSeconds(0.1f);
+        CollectionPanel.SetActive(!CollectionPanel.activeSelf);
+    }
+
+
 }
